@@ -6,7 +6,6 @@
 <title>AI 영상 제작 실전 · 1회차 생성</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
 <style>
 /* ===== 색과 글꼴 (시안 C · 수업 노트) ===== */
@@ -14,7 +13,7 @@
   --page:#E7E3DA; --bg:#FBFAF6; --fg:#1F2A37; --fg2:#3B4757; --muted:#6B7480; --line:#E2DED4;
   --card:#FFFFFF; --cardLine:#D9D4C7; --accent:#1F5F8B; --accent2:#C9642B; --onAccent:#fff; --margin:#E8B4A8;
   --h1:#FCE7B2; --h2:#D6E6F2; --h3:#DCEBD9; --h4:#F1DCD6; --grid:#ECE8DE;
-  --font:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; --head:"Noto Serif KR","Apple Myungjo",serif;
+  --font:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif; --head:Pretendard,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--page);color:var(--fg);font-family:var(--font);-webkit-font-smoothing:antialiased;word-break:keep-all;overflow-wrap:break-word}
@@ -25,7 +24,7 @@ button{font:inherit}
   background-image:linear-gradient(90deg,transparent 3.3%,var(--margin) 3.3%,var(--margin) calc(3.3% + 1.5px),transparent calc(3.3% + 1.5px))}
 .in{position:absolute;inset:0;padding:4.4cqw 5.2cqw 4.6cqw 6.8cqw;display:flex;flex-direction:column}
 .kicker{font-size:max(11px,calc(var(--u)*1.3));color:var(--accent);font-weight:600;letter-spacing:.04em;margin:0}
-h2{font-family:var(--head);font-size:calc(var(--u)*3.6);line-height:1.28;margin:calc(var(--u)*1) 0 0;font-weight:700;letter-spacing:-.01em}
+h2{font-family:var(--head);font-size:calc(var(--u)*3.6);line-height:1.28;margin:calc(var(--u)*1) 0 0;font-weight:800;letter-spacing:-.025em}
 h2 em,.big em,h3 em{font-style:normal;color:var(--accent)}
 h3{font-size:calc(var(--u)*2.05);margin:0;font-weight:700;line-height:1.35}
 .lead{font-size:calc(var(--u)*1.95);line-height:1.6;margin:calc(var(--u)*1.4) 0 0;color:var(--fg2)}
@@ -63,7 +62,7 @@ ol.steps li::before{content:counter(s);position:absolute;left:0;top:calc(var(--u
 .chips{display:flex;flex-wrap:wrap;gap:calc(var(--u)*.8);margin:0;padding:0;list-style:none}
 .chips li,.chips span{font-size:calc(var(--u)*1.6);padding:calc(var(--u)*.5) calc(var(--u)*1.2);border-radius:999px;border:1px solid var(--cardLine);background:var(--card)}
 .chips.hl li,.chips.hl span{font-weight:600;border:0}
-.big{font-family:var(--head);font-size:calc(var(--u)*5);line-height:1.3;font-weight:700;margin:0}
+.big{font-family:var(--head);font-size:calc(var(--u)*5);line-height:1.3;font-weight:800;letter-spacing:-.03em;margin:0}
 .center{flex:1;display:flex;flex-direction:column;justify-content:center;gap:calc(var(--u)*2)}
 .en{font-family:var(--font);font-size:calc(var(--u)*1.75);line-height:1.55;color:var(--fg);margin:0}
 .ko{font-size:calc(var(--u)*1.5);line-height:1.5;color:var(--muted);margin:calc(var(--u)*.5) 0 0}
@@ -147,7 +146,7 @@ ul.check small{display:block;color:var(--muted);font-size:max(11px,calc(var(--u)
 /* ===== 오늘의 흐름 ===== */
 ol.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:calc(var(--u)*1.1);counter-reset:f}
 ol.flow li{counter-increment:f;background:var(--card);border:1px solid var(--cardLine);border-top:calc(var(--u)*.5) solid var(--accent);border-radius:4px;padding:calc(var(--u)*1.4) calc(var(--u)*1.3);font-size:calc(var(--u)*1.7);line-height:1.45;font-weight:600}
-ol.flow li::before{content:counter(f);display:block;font-family:var(--head);font-size:calc(var(--u)*2.6);color:var(--accent);margin-bottom:calc(var(--u)*.4)}
+ol.flow li::before{content:counter(f);display:block;font-family:var(--head);font-weight:800;font-size:calc(var(--u)*2.6);color:var(--accent);margin-bottom:calc(var(--u)*.4)}
 ol.flow small{display:block;font-weight:400;color:var(--muted);font-size:max(11px,calc(var(--u)*1.35));margin-top:calc(var(--u)*.6)}
 
 .row.profile figure img{height:100%;width:100%;object-fit:cover;border:0;border-radius:4px}
@@ -174,7 +173,7 @@ ol.flow small{display:block;font-weight:400;color:var(--muted);font-size:max(11p
 .qmore{--u:10.5px;position:fixed;inset:0;background:rgba(20,26,34,.55);z-index:26;display:flex;justify-content:center;align-items:flex-start;padding:4vh 16px;overflow:auto}
 .qmore[hidden]{display:none}
 .qmore .sheet{background:var(--bg);border-radius:10px;max-width:980px;width:100%;padding:22px 24px 28px;position:relative}
-.qmore h2{font-family:var(--head);font-size:24px;margin:0 0 6px}
+.qmore h2{font-family:var(--head);font-size:24px;font-weight:800;margin:0 0 6px}
 .qmore .note{margin-bottom:14px}
 .qmore .close{position:absolute;right:20px;top:18px;border:1px solid var(--cardLine);background:#fff;border-radius:6px;padding:6px 12px;cursor:pointer}
 .qtabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px;position:sticky;top:-4vh;background:var(--bg);padding:10px 0;z-index:1}
